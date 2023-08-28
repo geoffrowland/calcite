@@ -12,7 +12,7 @@
 $(document).ready(function() {
 
 Info = {
-	width: "400",
+	width: 400,
 	height: 400,
 	debug: false,
 	j2sPath: "j2s",
@@ -25,7 +25,8 @@ Info = {
 	use: "HTML5",
 	readyFunction: null,
 	language: "en_GB",
-	script: "load 'data/calcite.cif' {444 666 1}; set displayCellParameters false"
+	displayCellParameters: false,
+	script: "load 'data/calcite.cif' {444 666 1}"
 }
 $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 });
