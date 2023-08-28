@@ -7,21 +7,35 @@
     </title>
     <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/zip/JSmol.min.js">   
     </script>
-    <script>
-      var Info = {
-        color: "#FFFFFF",
-        height: 300,
-        width: 300,
-        script: "load $caffeine",
-        use: "HTML5",
-        j2sPath: "j2s",
-        serverURL: "php/jsmol.php",
-      };
-      Jmol.getApplet("myJmol", Info);
-    </script>
-  </head>
-  <body>
-    <h1>Calcite</h1>
+<script type="text/javascript"> 
+
+$(document).ready(function() {
+
+Info = {
+	width: 400,
+	height: 400,
+	debug: false,
+	j2sPath: "j2s",
+	color: "0xC0C0C0",
+  disableJ2SLoadMonitor: true,
+  disableInitialConsole: true,
+	addSelectionOptions: true,
+	serverURL: "http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+	use: "HTML5",
+	readyFunction: null,
+	script: "load $caffeine"
+}
+$("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
+});
+</script>
+</head>
+<body>
+<h1>Calcite</h1>
+<span id=mydiv></span>
+<a href="javascript:Jmol.script(jmolApplet0, 'spin on')">spin on</a>
+
+<a href="javascript:Jmol.script(jmolApplet0, 'spin off')">spin off</a>
+
     <p>calcium carbonate</p>
     <p>CaCO<sub>3</sub></p>
   </body>
