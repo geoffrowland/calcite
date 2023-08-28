@@ -5,7 +5,7 @@
     <title>
       Calcite
     </title>
-    <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/zip/JSmol.min.js">   
+    <script type="text/javascript" src="JSmol.min.js">   
     </script>
 <script type="text/javascript"> 
 
@@ -17,12 +17,13 @@ Info = {
 	debug: false,
 	j2sPath: "j2s",
 	color: "0x000000",
-  disableJ2SLoadMonitor: true,
-  disableInitialConsole: true,
+        disableJ2SLoadMonitor: true,
+        disableInitialConsole: true,
 	addSelectionOptions: false,
 	serverURL: "http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
 	use: "HTML5",
 	readyFunction: null,
+	language: "en_GB",
 	script: "load data/calcite.cif"
 }
 $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
