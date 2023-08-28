@@ -19,11 +19,11 @@ Info = {
 	color: "0xC0C0C0",
   disableJ2SLoadMonitor: true,
   disableInitialConsole: true,
-	addSelectionOptions: true,
+	addSelectionOptions: false,
 	serverURL: "http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
 	use: "HTML5",
 	readyFunction: null,
-	script: "load $caffeine"
+	script: "load data/calcite.cif"
 }
 $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 });
