@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>
       Calcite
     </title>
     <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/zip/JSmol.min.js">   
+    </script>
+    <script>
+      var Info = {
+        color: "#FFFFFF",
+        height: 300,
+        width: 300,
+        script: "load $caffeine",
+        use: "HTML5",
+        j2sPath: "j2s",
+        serverURL: "php/jsmol.php",
+      };
+      Jmol.getApplet("myJmol", Info);
     </script>
   </head>
   <body>
