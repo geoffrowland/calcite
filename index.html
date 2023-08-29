@@ -44,10 +44,13 @@ $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 	<span title="Carbon" style="color: grey; font-weight: bold;">C</span>&nbsp;
 	<span title="Oxygen" style="color: red; font-weight: bold;">O</span>
 </div>
-<a href="javascript:Jmol.script(jmolApplet0, 'spin on')">spin on</a>
-
-<a href="javascript:Jmol.script(jmolApplet0, 'spin off')">spin off</a>
-
+<script type="text/javascript">
+Jmol.jmolRadioGroup(jmolApplet0, [
+ ["spacefill off",  "off"],
+ ["spacefill 23%",  "23%", "checked"],
+ ["spacefill 100%", "100%"]
+]);
+</script>	
     <p>calcium carbonate</p>
     <p>CaCO<sub>3</sub></p>
   </body>
