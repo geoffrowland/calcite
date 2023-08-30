@@ -32,7 +32,19 @@ Info = {
 	language: "en_GB",
 	script: "load 'data/calcite.cif' {444 666 1}; set displayCellParameters false; zoom in; frank off;"
 }
-$("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
+$("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info));
+function createElementKey() {
+  var y = 90;
+  for (var e in {*}.element.pivot) {
+    var c = {element=@e}.color;
+    draw id @{"d_"+ e} diameter 2 [90 @y %] color @c;
+    set echo id @{"e_" + e} [91 @{y-1} %];
+    echo @e;
+    font echo 24 bold sans;
+    y -= 5;
+  }
+}
+createElementKey;
 });
 </script>
 </head>
