@@ -8,9 +8,11 @@
     <script type="text/javascript" src="JSmol.min.js">   
     </script>
 <script type="text/javascript"> 
-
-$(document).ready(function() {
-
+var jmolApplet0;
+var use = "HTML5"; // JAVA HTML5 WEBGL IMAGE  are all otions
+jmol_isReady = function(applet) {
+    Jmol._getElement(applet, "appletdiv").style.border="1px solid lightgray"
+}
 Info = {
 	width: 400,
 	height: 400,
@@ -28,7 +30,7 @@ Info = {
 	//appletLoadingImage: "data/calcite.png",
 	serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
 	use: "HTML5",
-	readyFunction: null,
+	readyFunction: jmol_isReady,
 	language: "en_GB",
 	script: "load 'data/calcite.cif' {555 666 1}; set displayCellParameters false; zoom in; frank off;"
 }
@@ -44,7 +46,9 @@ function jmolMenu(a) {Jmol.jmolMenu(jmolApplet0, a)}
 </head>
 <body>
 <h1>Calcite</h1>
-<div id=mydiv style="width: 400px; height: 400px; border-style: solid; border-color: lightgray"><img src="https://geoffrowland.github.io/calcite/data/calcite.png"></div>
+<script type="text/javascript">
+jmolApplet0 = Jmol.getApplet("jmolApplet0", Info)
+</script>>
 <div style="width: 400px;">
 	<span title="Calcium" style="color: green; font-weight: bold;">Ca</span>&nbsp;
 	<span title="Carbon" style="color: grey; font-weight: bold;">C</span>&nbsp;
