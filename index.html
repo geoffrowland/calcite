@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>
-      Calcite
-    </title>
-    <script type="text/javascript" src="JSmol.min.js">   
-    </script>
+<head>
+<title>Calcite</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="JSmol.min.js"></script>
 <script type="text/javascript"> 
-var jmolApplet0;
-var use = "HTML5"; // JAVA HTML5 WEBGL IMAGE  are all otions
-jmol_isReady = function(applet) {
-    Jmol._getElement(applet, "appletdiv").style.border="1px solid lightgray"
-}
+
+// supersimple2.htm - illustrating the use of jQuery(document).ready to 
+// populate all spans and divs AFTER the page is loaded.
+// This is good programming practice.
+
+$(document).ready(
+
+function() {
+
 Info = {
 	width: 400,
 	height: 400,
 	debug: false,
 	j2sPath: "j2s",
 	color: "white",
-        disableJ2SLoadMonitor: true,	
-        disableInitialConsole: true,
+  disableJ2SLoadMonitor: true,
+  disableInitialConsole: true,
 	addSelectionOptions: false,
-	appletLoadingImage: "https://geoffrowland.github.io/calcite/data/calcite.jpg",
-	//coverImage: "https://geoffrowland.github.io/calcite/data/calcite.png",
-	makeLiveImage: false,
-	deferApplet: false,
-        deferUncover: true,
-	//appletLoadingImage: "data/calcite.png",
-	serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+	serverURL: "http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
 	use: "HTML5",
-	readyFunction: jmol_isReady,
+	readyFunction: null,
 	language: "en_GB",
 	script: "load 'data/calcite.cif' {555 666 1}; set displayCellParameters false; zoom in; frank off;"
 }
 // these are conveniences that mimic behavior of Jmol.js
-function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
-function jmolButton(script, text) {Jmol.jmolButton(jmolApplet0, script,text)}
-function jmolHtml(s) { document.write(s) };
-function jmolBr() { jmolHtml("<br>") }
-function jmolMenu(a) {Jmol.jmolMenu(jmolApplet0, a)}
-});
+// function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
+// function jmolButton(script, text) {Jmol.jmolButton(jmolApplet0, script,text)}
+// function jmolHtml(s) { document.write(s) };
+// function jmolBr() { jmolHtml("<br>") }
+// function jmolMenu(a) {Jmol.jmolMenu(jmolApplet0, a)}
+$("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
+
+$("#btns").html(
+	Jmol.jmolButton(jmolApplet0, "spin on","spin ON")
+       +Jmol.jmolButton(jmolApplet0, "spin off","spin OFF")
+ )	
+}
+);
 </script>
 </head>
 <body>
-<h1>Calcite</h1>
-<script type="text/javascript">
-jmolApplet0 = Jmol.getApplet("jmolApplet0", Info)
-</script>
+<span id=mydiv></span>
+<span id=btns></span>
 <div style="width: 400px;">
 	<span title="Calcium" style="color: green; font-weight: bold;">Ca</span>&nbsp;
 	<span title="Carbon" style="color: grey; font-weight: bold;">C</span>&nbsp;
 	<span title="Oxygen" style="color: red; font-weight: bold;">O</span>
 </div>
-<script type="text/javascript">
-    jmolBr()
-    jmolButton("spacefill only;spacefill 23%;wireframe 0.15","ball&stick")
-    jmolBr()
-    </scrpt>
 <p>calcium carbonate</p>
-    <p>CaCO<sub>3</sub></p>
-  </body>
-  
+<p>CaCO<sub>3</sub></p>	
+</body>
 </html>
