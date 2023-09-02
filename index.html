@@ -38,8 +38,7 @@ Info = {
 $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 
 $("#btns").html(
-	Jmol.jmolButton(jmolApplet0, "spin on","spin ON")
-       +Jmol.jmolButton(jmolApplet0, "spin off","spin OFF")
+	Jmol.jmolCheckbox(jmolApplet0, "spin off", "spin on", "toggle spin")
  )	
 }
 );
