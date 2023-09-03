@@ -12,9 +12,9 @@
 
 $(document).ready(
 
-function() {
+    function() {
 
-Info = {
+    Info = {
 	width: 400,
 	height: 400,
 	debug: false,
@@ -28,26 +28,25 @@ Info = {
 	readyFunction: null,
 	language: "en_GB",
 	script: "load 'data/calcite.cif' {555 666 1}; set displayCellParameters false; zoom in; frank off;"
-}
-// these are conveniences that mimic behavior of Jmol.js
-// function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
-// function jmolButton(script, text) {Jmol.jmolButton(jmolApplet0, script,text)}
-// function jmolHtml(s) { document.write(s) };
-// function jmolBr() { jmolHtml("<br>") }
-// function jmolMenu(a) {Jmol.jmolMenu(jmolApplet0, a)}
+    }
+    // these are conveniences that mimic behavior of Jmol.js
+    // function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
+    // function jmolButton(script, text) {Jmol.jmolButton(jmolApplet0, script,text)}
+    // function jmolHtml(s) { document.write(s) };
+    // function jmolBr() { jmolHtml("<br>") }
+    // function jmolMenu(a) {Jmol.jmolMenu(jmolApplet0, a)}
 	
-$("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
+    $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 
-$("#btns").html(
-//   Jmol.jmolRadioGroup(jmolApplet0, [
-//      ["spacefill off",  "off"],
-//      ["spacefill 23%",  "23%", "checked"],
-//      ["spacefill 100%", "100%"]
-//  ]);
-//  Jmol.jmolBr();
-    Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false);
+    $("#btns").html(
+    //   Jmol.jmolRadioGroup(jmolApplet0, [
+    //      ["spacefill off",  "off"],
+    //      ["spacefill 23%",  "23%", "checked"],
+    //      ["spacefill 100%", "100%"]
+    //  ]);
+    //  Jmol.jmolBr();
     Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false)
-)	
+    )	
 }
 );
 </script>
