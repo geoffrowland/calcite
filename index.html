@@ -38,11 +38,12 @@ Info = {
 $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 
 $("#btns").html(
-    //Jmol.jmolRadioGroup(jmolApplet0, [
-    //    ["spacefill 23%; wireframe 0.15;","ball and stick",true],
-    // ["spacefill off; wireframe 0.15;","sticks"],
-    //  ["spacefill on; wireframe off;","spheres"]
-    //], "<br>", "atomstyle");
+    Jmol.jmolRadioGroup(jmolApplet0, [
+        ["spacefill off",  "off"],
+        ["spacefill 23%",  "23%", "checked"],
+        ["spacefill 100%", "100%"]
+    ]);
+    Jmol.jmolBr();
     Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "toggle spin", false)
 )	
 }
