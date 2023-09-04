@@ -43,9 +43,9 @@ $(document).ready(
           ["spacefill off",  "off"],
           ["spacefill 23%",  "23%", "checked"],
           ["spacefill 100%", "100%"]
-    ])
-    //  Jmol.jmolBr()
-    //Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false);
+    ])	    
+    $("#btns1").html(
+       Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false);
     )	
 }
 );
@@ -54,6 +54,7 @@ $(document).ready(
 <body>
 <div id=mydiv></div>
 <div id=btns></div>
+<div id=btns>1</div>
 <div style="width: 400px;">
 	<span title="Calcium" style="color: green; font-weight: bold;">Ca</span>&nbsp;
 	<span title="Carbon" style="color: grey; font-weight: bold;">C</span>&nbsp;
