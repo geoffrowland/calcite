@@ -40,6 +40,11 @@ $(document).ready(
           ["spacefill 23%",  "Ball & Stick", "checked"],
           ["spacefill 100%", "Spacefill"]
        ])
+       +Jmol.jmolRadioGroup(jmolApplet0, [
+          ["spacefill off",  "Stick"],
+          ["spacefill 23%",  "Ball & Stick", "checked"],
+          ["spacefill 100%", "Spacefill"]
+       ])
        +Jmol.jmolHtml("<br>")
        +Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false)
     )
