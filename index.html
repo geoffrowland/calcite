@@ -40,8 +40,13 @@ $(document).ready(
           ["spacefill 23%",  "23%", "checked"],
           ["spacefill 100%", "100%"]
        ])
-       + jmolHtml("<br>")
-       + Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false)
+       +Jmol.jmolRadioGroup(jmolApplet0, [
+          ["spacefill off",  "off"],
+          ["spacefill 23%",  "23%", "checked"],
+          ["spacefill 100%", "100%"]
+       ])
+      // +jmolHtml("<br>")
+      // +Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false)
     )
 });
 </script>
