@@ -11,7 +11,7 @@ $(document).ready(
     function() {
 
     Info = {
-	width: 400,
+	width: "100%",
 	height: 400,
 	debug: false,
 	j2sPath: "j2s",
@@ -23,7 +23,7 @@ $(document).ready(
 	use: "HTML5",
 	readyFunction: null,
 	language: "en_GB",
-	script: "load 'data/calcite.cif' {1 1 1} packed; set displayCellParameters false; frank off;"
+	script: "load 'data/calcite.cif' {2 2 2} packed; set displayCellParameters false; frank off;"
     }
     // these are conveniences that mimic behavior of Jmol.js
     // function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
@@ -42,8 +42,8 @@ $(document).ready(
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
-          ["load 'data/calcite.cif' {1 1 1} packed", "Load 1x1x1 cell", "checked"],
-          ["load 'data/calcite.cif' {2 2 2} packed", "Load 2x2x2 cell"],
+          ["load 'data/calcite.cif' {1 1 1} packed", "Load 1x1x1 cell"],
+          ["load 'data/calcite.cif' {2 2 2} packed", "Load 2x2x2 cell", "checked"],
           ["load 'data/calcite.cif' {3 3 3} packed", "Load 3x3x3 cell"]
        ])
        +Jmol.jmolHtml("<br>")
