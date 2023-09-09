@@ -36,9 +36,9 @@ $(document).ready(
 
     $("#btns").html(
        Jmol.jmolRadioGroup(jmolApplet0, [
-          ["spacefill off",  "Stick"],
-          ["spacefill 23%",  "Ball & Stick", "checked"],
-          ["spacefill 100%", "Spacefill"]
+          ["select all; spacefill off", "Stick"],
+          ["select all; spacefill 23%", "Ball & Stick", "checked"],
+          ["select all; spacefill 100%; select calcium; spacefill ionic", "Spacefill"]
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
