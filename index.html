@@ -36,18 +36,18 @@ $(document).ready(
 
     $("#btns").html(
        Jmol.jmolRadioGroup(jmolApplet0, [
-          ["select all; spacefill off", "Stick"],
-          ["select all; spacefill 23%", "Ball & Stick", "checked"],
-          ["select all; spacefill 100%; select calcium; spacefill ionic", "Spacefill"],
-	  ["select all; spacefill off; select (calcium or carbon); polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
+          ["spacefill off", "Stick"],
+          ["spacefill 23%", "Ball & Stick", "checked"],
+          ["spacefill 100%", "Spacefill"],
+	  ["polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
           ["display {1 1 1}", "1x1x1 cell"],
 	  ["display {2 2 2}", "2x2x2 cell"],
           ["display {3 3 3}", "3x3x3 cell", "checked"],
-          ["select all; spacefill off; select calcium; spacefill 23%", "Ca<sup>2+</sup> ions"],
-          ["select all; spacefill off; select (carbon or oxygen); spacefill 23%", "CO<sub>3</sub><sup>2-</sup> ions"],
+          ["select calcium; spacefill 23%", "Ca<sup>2+</sup> ions"],
+          ["select (carbon or oxygen); spacefill 23%", "CO<sub>3</sub><sup>2-</sup> ions"],
        ])
        +Jmol.jmolHtml("<br>")
        +Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false)
