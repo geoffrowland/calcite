@@ -23,7 +23,7 @@ $(document).ready(
 	use: "HTML5",
 	readyFunction: null,
 	language: "en_GB",
-	script: "load 'data/calcite.cif' {3 3 1} packed; axes off; set displayCellParameters false; frank off;"
+	script: "load 'data/calcite.cif' {3 3 3} packed; axes off; set displayCellParameters false; frank off;"
     }
     // these are conveniences that mimic behavior of Jmol.js
     // function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
@@ -44,8 +44,8 @@ $(document).ready(
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
           ["restrict cell={1 1 1}", "1x1x1 cell"],
-	  ["restrict cell={2 2 1}", "2x2x1 cell"],
-          ["restrict cell={3 3 1}", "3x3x1 cell", "checked"],
+	  ["restrict cell={2 2 2}", "2x2x2 cell"],
+          ["restrict cell={3 3 3}", "3x3x3 cell", "checked"],
           ["select all; spacefill off; select calcium; spacefill 23%", "Ca<sup>2+</sup> ions"],
           ["select all; spacefill off; select (carbon or oxygen); spacefill 23%", "CO<sub>3</sub><sup>2-</sup> ions"],
        ])
