@@ -36,10 +36,10 @@ $(document).ready(
 
     $("#btns").html(
        Jmol.jmolRadioGroup(jmolApplet0, [
-          ["spacefill off", "Stick"],
-          ["spacefill 23%", "Ball & Stick", "checked"],
-          ["spacefill 100%", "Spacefill"],
-	  ["polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
+          ["spacefill off; polyhedra off", "Stick"],
+          ["spacefill 23%; polyhedra off", "Ball & Stick", "checked"],
+          ["spacefill 100%; polyhedra off", "Spacefill"],
+	  ["spacefill 23%; polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
