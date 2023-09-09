@@ -43,10 +43,12 @@ $(document).ready(
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
-          ["load 'data/calcite.cif' {1 1 1} packed", "Load 1x1x1 cell"],
-	  ["load 'data/calcite.cif' {2 2 1} packed", "Load 2x2x1 cell"],
-          ["load 'data/calcite.cif' {2 2 2} packed", "Load 2x2x2 cell", "checked"],
-          ["load 'data/calcite.cif' {3 3 3} packed", "Load 3x3x3 cell"]
+          ["load 'data/calcite.cif' {1 1 1} packed", "1x1x1 cell"],
+	  ["load 'data/calcite.cif' {2 2 1} packed", "2x2x1 cell"],
+          ["load 'data/calcite.cif' {2 2 2} packed", "2x2x2 cell", "checked"],
+          ["load 'data/calcite.cif' {3 3 3} packed", "3x3x3 cell"],
+          ["select all; spacefill off; select calcium; spacefill 23%", "Ca<sup>2+</sup> ions"],
+          ["select all; spacefill off; select (carbon or oxygen); spacefill 23%", "CO<sub>3</sub><sup>2-</sup> ions"],
        ])
        +Jmol.jmolHtml("<br>")
        +Jmol.jmolCheckbox(jmolApplet0, "spin on", "spin off", "Spin", false)
