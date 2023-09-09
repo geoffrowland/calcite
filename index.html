@@ -38,7 +38,8 @@ $(document).ready(
        Jmol.jmolRadioGroup(jmolApplet0, [
           ["select all; spacefill off", "Stick"],
           ["select all; spacefill 23%", "Ball & Stick", "checked"],
-          ["select all; spacefill 100%; select calcium; spacefill ionic", "Spacefill"]
+          ["select all; spacefill 100%; select calcium; spacefill ionic", "Spacefill"],
+	  ["select all; spacefill off; select (calcium or carbon); polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
