@@ -38,8 +38,8 @@ $(document).ready(
        Jmol.jmolRadioGroup(jmolApplet0, [
           ["spacefill off; polyhedra off", "Stick"],
           ["spacefill 23%; polyhedra off", "Ball & Stick", "checked"],
-          ["spacefill 100%; polyhedra off", "Spacefill"],
-	  ["spacefill 23%; define polyTemp selected; select polyTemp and (calcium or carbon); polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
+          ["define spaceTemp selected; polyhedra off; select spaceTemo and calcium; spacefill ionic; select spaceTemp and (carbon or oxygen); spacefill 100%; select spaceTemp", "Spacefill"],
+	  ["spacefill 23%; define polyTemp selected; select polyTemp and (calcium or carbon); polyhedra bonds; color polyhedra translucent; select polyTemp", "Polyhedra"]   
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
