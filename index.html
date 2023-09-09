@@ -23,7 +23,7 @@ $(document).ready(
 	use: "HTML5",
 	readyFunction: null,
 	language: "en_GB",
-	script: "load 'data/calcite.cif' {3 3 3}; restrict cell={2 2 2} or oxygen and within(2.5, cell={2 2 2}); set unitcell {1 1 1}; center visible; axes off; set displayCellParameters false; frank off;"
+	script: "load 'data/calcite.cif' {3 3 3}; select all; restrict cell={2 2 2} or oxygen and within(2.5, cell={2 2 2}); set unitcell {1 1 1}; center visible; axes off; set displayCellParameters false; frank off;"
     }
     // these are conveniences that mimic behavior of Jmol.js
     // function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
@@ -39,7 +39,7 @@ $(document).ready(
           ["spacefill off; polyhedra off", "Stick"],
           ["spacefill 23%; polyhedra off", "Ball & Stick", "checked"],
           ["spacefill 100%; polyhedra off", "Spacefill"],
-	  ["spacefill 23%; define polyTemp selected; select polyTemo and (calcium or carbon); polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
+	  ["spacefill 23%; define polyTemp selected; select polyTemp and (calcium or carbon); polyhedra bonds; color polyhedra translucent", "Polyhedra"]   
        ])
        +Jmol.jmolHtml("<br>")    
        +Jmol.jmolRadioGroup(jmolApplet0, [
