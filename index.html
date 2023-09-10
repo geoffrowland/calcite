@@ -20,10 +20,10 @@ $(document).ready(
         disableInitialConsole: true,
 	addSelectionOptions: false,
 	serverURL: "http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
-	use: "HTML5",
+	use: "WEBGL HTML5",
 	readyFunction: null,
 	language: "en_GB",
-	script: "load 'data/calcite.cif' {3 3 3}; select all; define ThreeByThree selected; restrict cell={2 2 2} or oxygen and within(2.5, cell={2 2 2}); set unitcell {1 1 1}; center visible; axes off; set displayCellParameters false; frank off;"
+	script: "set antialiasDisplay; load 'data/calcite.cif' {3 3 3}; select all; define ThreeByThree selected; restrict cell={2 2 2} or oxygen and within(2.5, cell={2 2 2}); set unitcell {1 1 1}; center visible; axes off; set displayCellParameters false; frank off;"
     }
     // these are conveniences that mimic behavior of Jmol.js
     // function jmolCheckbox(script1, script0,text,ischecked) {Jmol.jmolCheckbox(jmolApplet0,script1, script0, text, ischecked)}
