@@ -35,7 +35,7 @@ $(document).ready(
     $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 
     $("#btns").html(
-       +Jmol.jmolRadioGroup(jmolApplet0, [
+       Jmol.jmolRadioGroup(jmolApplet0, [
           ["spacefill off; polyhedra off", "Stick"],
           ["spacefill 23%; polyhedra off", "Ball & Stick", "checked"],
           ["define spaceTemp selected; polyhedra off; select spaceTemp and calcium; spacefill ionic; select spaceTemp and (carbon or oxygen); spacefill 100%; select spaceTemp", "Spacefill"],
