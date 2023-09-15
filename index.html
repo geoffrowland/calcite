@@ -35,7 +35,6 @@ $(document).ready(
     $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
 
     $("#btns").html(
-       Jmol.setButtonCss(null, "style='height:50px'")
        +Jmol.jmolRadioGroup(jmolApplet0, [
           ["spacefill off; polyhedra off", "Stick"],
           ["spacefill 23%; polyhedra off", "Ball & Stick", "checked"],
