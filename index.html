@@ -43,7 +43,7 @@ $(document).ready(
           ["define spaceTemp selected; polyhedra off; select spaceTemp and calcium; spacefill ionic; select spaceTemp and (carbon or oxygen); spacefill 100%; select spaceTemp", "Spacefill"],
 	  ["spacefill 23%; define polyTemp selected; select polyTemp and (calcium or carbon); polyhedra bonds; color polyhedra translucent; select polyTemp", "Polyhedra"]   
        ])
-       +Jmol.jmolHtml("<br>")    1 1 1
+       +Jmol.jmolHtml("<br>")
        +Jmol.jmolRadioGroup(jmolApplet0, [
 	  ["load 'data/calcite.cif' {1 1 1} PACKED", "1x1x1 cell"],
 	  ["load 'data/calcite.cif' {2 2 2} PACKED", "2x2x2 cell"],
