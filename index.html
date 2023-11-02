@@ -36,12 +36,12 @@ $(document).ready(
 
     $("#btns").html(
        Jmol.jmolRadioGroup(jmolApplet0, [
-          ["select all; spacefill off; polyhedra off; wireframe on", "Stick"],
+          ["select all; spacefill off; polyhedra off; wireframe 0.1", "Stick"],
 	  ["select all; spacefill 23%; wireframe off; polyhedra off", "Ball"],
-          ["select all; spacefill 23%; wireframe off; polyhedra off; bondmode OR; select carbon; wireframe on", "No Lattice"],
-          ["select all; spacefill 23%; wireframe on; polyhedra off", "Ball & Stick", "checked"],
+          ["select all; spacefill 23%; wireframe off; polyhedra off; set bondmode OR; select carbon; wireframe 0.1", "No Lattice"],
+          ["select all; spacefill 23%; wireframe 0.1; polyhedra off", "Ball & Stick", "checked"],
 	  ["select all; polyhedra off; select calcium; spacefill ionic; select (carbon or oxygen); spacefill 100%", "Spacefill"],
-	  ["select all; spacefill 23%; select (calcium or carbon); polyhedra bonds; color polyhedra translucent", "Polyhedra"]  
+	  ["select all; spacefill 23%; wireframe 0.1; select (calcium or carbon); polyhedra bonds; color polyhedra translucent", "Polyhedra"]  
           ["define spaceTemp selected; polyhedra off; select spaceTemp and calcium; spacefill ionic; select spaceTemp and (carbon or oxygen); spacefill 100%; select spaceTemp", "Spacefill"],
 	  ["spacefill 23%; define polyTemp selected; select polyTemp and (calcium or carbon); polyhedra bonds; color polyhedra translucent; select polyTemp", "Polyhedra"]   
        ])
